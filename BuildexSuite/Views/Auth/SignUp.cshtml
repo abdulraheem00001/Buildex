@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="login-card">
+    <h4 class="text-center mb-3">First, sign up free</h4>
+    <p class="text-center text-muted">Continue with a free account to start your website or store.</p>
+
+    <!-- Full Name -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-id-card-line fs-4"></i>
+            </span>
+            <input type="text" id="FullName" class="form-control border-start-0" placeholder="Full name">
+        </div>
+    </div>
+
+    <!-- Username -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-user-line fs-4"></i>
+            </span>
+            <input type="text" id="Username" class="form-control border-start-0" placeholder="Username">
+        </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-mail-line fs-4"></i>
+            </span>
+            <input type="email" id="Email" class="form-control border-start-0" placeholder="Email address">
+        </div>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-lock-password-line fs-4"></i>
+            </span>
+            <input type="password" id="Password" class="form-control border-start-0" placeholder="Password">
+        </div>
+    </div>
+
+    <!-- Sign up Button -->
+    <button id="SignUpBtn" class="btn btn-primary w-100 py-2">Sign Up</button>
+
+
+    <div class="text-center mt-4">
+        <p class="mb-2">Already registered?</p>
+        <a asp-controller="Auth" asp-action="Login" class="btn btn-outline-primary w-100 py-2">Log in</a>
+    </div>
+</div>

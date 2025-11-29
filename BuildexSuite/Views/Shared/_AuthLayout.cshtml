@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BuildexSuite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Auth.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BuildexSuite.styles.css" asp-append-version="true" />
+    <link href="~/lib/RemixIcon_Fonts_v4.7.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+    
+    <main role="main" class="vh-100 d-flex justify-content-center align-items-center">
+        @RenderBody()
+    </main>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="Alert" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="~/images/logo.png" class="toast-img rounded me-2" alt="...">
+                <strong class="me-auto"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="AlertBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Auth.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

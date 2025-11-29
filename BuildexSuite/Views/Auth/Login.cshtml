@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="login-card">
+    <h4 class="text-center mb-3">Welcome back</h4>
+    <p class="text-center text-muted">You can log in to your account here.</p>
+
+    <!-- Email -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-mail-line fs-4"></i>
+            </span>
+            <input type="email" id="LoginEmail" class="form-control border-start-0" placeholder="Email address">
+        </div>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+                <i class="ri-lock-password-line fs-4"></i>
+            </span>
+            <input type="password" id="LoginPassword" class="form-control border-start-0" placeholder="Password">
+        </div>
+    </div>
+
+    <a href="#" class="d-block mb-3 text-primary small">Forgot your password?</a>
+
+    <!-- Login Button -->
+    <button id="LoginBtn" class="btn btn-primary w-100 py-2">Log In</button>
+
+
+    <div class="text-center mt-4">
+        <p class="mb-2">New here?</p>
+        <a asp-controller="Auth" asp-action="SignUp" class="btn btn-outline-primary w-100 py-2">Sign up</a>
+    </div>
+</div>

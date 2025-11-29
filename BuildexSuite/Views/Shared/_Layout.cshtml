@@ -7,40 +7,58 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BuildexSuite.styles.css" asp-append-version="true" />
+    <link href="~/lib/RemixIcon_Fonts_v4.7.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BuildexSuite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+    <div class="d-flex">
+
+
+        <!-- left sidebar -->
+        <div class="border-end bg-white" style="width:250px; height:100vh; position:fixed; left:0; top:0;">
+            <div class="p-3 border-bottom">
+                <h5 class="m-0">JIMDO</h5>
+            </div>
+
+
+            <ul class="nav flex-column p-2">
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">🏠 Dashboard</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">🛠 Website Builder</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">🛒 Store</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">📄 Smart Forms</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">📊 Statistics</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">📢 Marketing</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">👤 Contacts</a></li>
+                <li class="nav-item mb-1"><a class="nav-link text-dark" href="#">✉ Email</a></li>
+            </ul>
+        </div>
+
+
+        <!-- main content area -->
+        <div class="flex-grow-1" style="margin-left:250px; width:calc(100% - 250px);">
+
+
+            <!-- topbar -->
+            <div class="d-flex justify-content-end align-items-center bg-white border-bottom px-4" style="height:60px;">
+                <a href="#" class="me-4 text-dark">Help</a>
+                <a href="#" class="me-4 text-primary">Upgrade</a>
+                <a href="#" class="me-4 text-dark">Projects</a>
+                <span class="me-4 position-relative">🔔 <span class="badge bg-primary position-absolute top-0 start-100 translate-middle">1</span></span>
+                <span>👤</span>
+            </div>
+
+
+            <!-- content -->
+            <div class="p-4" style="height:calc(100vh - 60px); overflow-y:auto;">
+                <div class="bg-white p-5 border rounded" style="min-height:500px;">
+                    @RenderBody()
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - BuildexSuite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
         </div>
-    </footer>
+    </div>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
